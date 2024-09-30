@@ -1,0 +1,79 @@
+.container {
+    text-align: center;
+    margin-top: 50px; /* Consider changing this to a percentage or vh for better scaling */
+    background-color: #2a2a2b;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%; /* Ensures container is responsive */
+    max-width: 960px; /* Max width for larger screens */
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .prompt {
+    background-color: #1f1f1f;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin: 0 5%; /* Responsive margins */
+  }
+  
+  .correction {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #FFD700;
+  }
+  
+  .score {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .title, .score {
+      font-size: 20px; /* Smaller font size for smaller screens */
+    }
+  
+    .prompt {
+      font-size: 16px; /* Smaller font size within prompts */
+    }
+  
+    .option-button {
+      width: 80px;
+      height: 80px;
+      font-size: 0.8em;
+    }
+  
+    .container {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title, .score {
+      font-size: 18px;
+    }
+  
+    .prompt {
+      font-size: 14px;
+    }
+  
+    .option-button {
+      width: 70px;
+      height: 70px;
+      font-size: 0.7em;
+    }
+  
+    .container {
+      padding: 10px;
+      margin-top: 20px; /* Less vertical space on very small screens */
+    }
+  }
+  
