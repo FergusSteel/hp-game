@@ -65,7 +65,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "hp-again:build:production"
+              "browserTarget": "hp-again:build"
             },
             "development": {
               "browserTarget": "hp-again:build:development"
