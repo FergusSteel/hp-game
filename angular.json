@@ -11,31 +11,23 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/hp-again",
             "index": "src/index.html",
-            "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "main": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/assets"
               }
             ],
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [
-              "build", "ng build"],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -44,20 +36,27 @@
                 {
                   "type": "initial",
                   "maximumWarning": "2mb", 
-                  "maximumError": "7mb" 
+                  "maximumError": "7mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "optimization": true,
+              "sourceMap": false,
+              "namedChunks": false,
+              "vendorChunk": false,
+              "buildOptimizer": true
             },
             "development": {
               "optimization": false,
+              "sourceMap": true,
+              "vendorChunk": true,
               "extractLicenses": false,
-              "sourceMap": true
+              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"
@@ -66,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "hp-again:build:production"
+              "browserTarget": "hp-again:build:production"
             },
             "development": {
-              "buildTarget": "hp-again:build:development"
+              "browserTarget": "hp-again:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -88,7 +87,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/assets"
               }
             ],
             "styles": [
