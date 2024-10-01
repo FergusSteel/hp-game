@@ -62,7 +62,7 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular",
+          "builder": "@angular-devkit/build-angular:browser",
           "configurations": {
             "production": {
               "browserTarget": "hp-again:build:production"
