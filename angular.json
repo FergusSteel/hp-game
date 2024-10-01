@@ -62,16 +62,16 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-devkit/build-angular",
           "configurations": {
             "production": {
-              "browserTarget": "hp-again:build"
+              "browserTarget": "hp-again:build:production"
             },
             "development": {
               "browserTarget": "hp-again:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "production"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n"
