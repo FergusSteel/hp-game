@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
+    "prestart": "npm install",
     "start": "npx ng serve --configuration production",
     "build": "npx ng build --configuration production",
     "watch": "ng build --watch --configuration development",
