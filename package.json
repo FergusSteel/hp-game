@@ -8,7 +8,6 @@
     "build": "npx ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "postinstall": "npm install -g @angular/cli",
     "serve:ssr:hp-again": "node dist/hp-again/server/server.mjs"
   },
   "private": true,
